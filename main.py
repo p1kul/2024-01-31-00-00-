@@ -5,7 +5,7 @@ import asyncio
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-api = '7735380637:AAHpdvn8A9aM7zctdMPntzEHaUfJoATj5wY'
+api = 'ключ'
 bot = Bot(api)
 dp = Dispatcher(bot, storage = MemoryStorage())
 
@@ -52,7 +52,7 @@ async def get_buying_list(message):
     with open('maxler-creatine-500-gr-arbuz_-mcp.jpg', 'rb') as img:
         await message.answer_photo(img,f'Название: Product4 | Описание: описание 4 | Цена: 400 ')
     await message.answer('Выберите продукт для покупки: ', reply_markup=keybord_for_buy)
-    
+
 @dp.callback_query_handler(text = 'product_buying')
 async def send_confirm_message(call):
     await call.message.answer('Вы успешно приобрели продукт!')
